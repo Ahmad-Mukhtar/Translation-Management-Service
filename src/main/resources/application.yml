@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:h2:mem:translations;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    defer-datasource-initialization: true
+security:
+  jwt:
+    secret: 91adaa781f7bac40d7fc2d958b93ad594c84ff4b80a31624984de1e949bcdb88
+    expiration: 3600000
