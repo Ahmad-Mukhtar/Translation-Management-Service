@@ -6,6 +6,8 @@ import com.digitaltol.translation.service.TranslationService;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
@@ -47,7 +49,7 @@ public class TranslationController {
             Pageable page) {
         return ResponseEntity.ok(svc.search(tag, key, content, page));
     }
-
+    @Operation(description = "Use Postman For testing this Endpoint")
     @GetMapping(value = "/export", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<StreamingResponseBody> streamTranslations() {
         StreamingResponseBody stream = outputStream -> {

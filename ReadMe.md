@@ -3,7 +3,7 @@ A Spring Boot API for managing translations, supporting multiple locales (en, f
 
 ## Features
 - Token-based (JWT) authentication
-- PSR-12-like code style and SOLID design
+- Used SOLID design
 - Optimized queries with indexes
 - Bulk data loader (100k records) added upon running
 - Docker & Docker Compose
@@ -28,7 +28,4 @@ A Spring Boot API for managing translations, supporting multiple locales (en, f
 - **Security** via `JwtFilter` & stateless sessions
 - **DataLoader** for scalability tests Add 100k records  when application boots up
 - For testing the Export Endpoint kindly use postman or other sources since Swagger does not support huge data.
-- For now H2 InMemory DB (Due to Less Time) is utilized But any other SQL DB preferably PostgreSQL Should be Used.
-
----
-```
+- For now H2 InMemory DB (Due to Time constraints) is utilized But any other SQL DB preferably PostgreSQL Should be Used.
